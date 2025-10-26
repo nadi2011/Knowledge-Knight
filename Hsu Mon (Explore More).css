@@ -1,0 +1,253 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #0a1f44;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffcc00;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(10, 31, 68, 0.65); /* overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeIn 1.8s ease forwards;
+}
+
+.btn {
+  background: #ffcc00;
+  color: #0a1f44;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+  animation: slideUp 2.2s ease forwards;
+}
+
+.btn:hover {
+  background: #ffdb4d;
+}
+
+/* Universities Section */
+.universities {
+  padding: 70px 40px;
+  text-align: center;
+  background: white;
+}
+
+.universities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0a1f44;
+}
+
+.uni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.uni-card {
+  background: #f0f4fa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.uni-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.uni-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.uni-card h3 {
+  margin: 15px 0 10px;
+  color: #0a1f44;
+}
+
+.uni-card p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a1f44;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------- */
+/* Explore Page Enhancements     */
+/* (append-only — won't break original) */
+/* ----------------------------- */
+
+/* Improve paragraph readability in .universities sections */
+.universities p {
+  line-height: 1.6;
+}
+
+/* Shared table styling used by pages */
+.info-table,
+table {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table headers */
+.info-table th,
+table th {
+  background: #0a1f44;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Table cells */
+.info-table td,
+table td {
+  padding: 15px;
+  background: #fff;
+  color: #333;
+}
+
+/* Zebra rows */
+.info-table tr:nth-child(even) td,
+table tr:nth-child(even) td {
+  background: #f0f4fa;
+}
+
+/* Hover highlight for table rows */
+.info-table tr:hover td,
+table tr:hover td {
+  background: #fffbcc;
+  transition: background 0.3s ease;
+}
+
+/* Responsive tweak for images on small screens */
+@media (max-width: 768px) {
+  .uni-card img {
+    height: 150px;
+  }
+}
+
+/* Slight typography tweak for hero */
+.hero-content h1 {
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-style: italic;
+}
+
+/* Use existing fadeIn for .universities and tables */
+.universities,
+.uni-grid,
+.info-table,
+table {
+  animation: fadeIn 1.2s ease-in;
+}
+

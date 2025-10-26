@@ -1,0 +1,412 @@
+body{
+    background-color: rgb(180, 201, 245);
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 225%;
+    color: #ffffff;
+    animation: shake 2s linear infinite alternate;
+}
+@keyframes shake{
+    0%{scale: 0.95;}
+    100%{scale: 1;}
+}
+.containerfluid{
+    width: 100%;
+}
+.container{
+    background-color: #0a1f44;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+.col{
+    float: left;
+    padding: 20px;
+}
+.pinterest{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col{
+    padding: 20px;
+    float: left;
+}
+.box-img{
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    position: relative;
+}
+.img-box{
+    background-image: url(Image/Oxford\ University\ Image.png);
+}
+.img-box1{
+    background-image: url(Image/Cambridge\ University.jpg);
+}
+.img-box2{
+    background-image: url(Image/Yangon\ University.jpg);
+}
+.img-box3{
+    background-image: url(Image/Switzerland\ University.jpg);
+}
+.img-box4{
+    background-image: url(Image/Harvard\ University.jpg);
+}
+.img-box5{
+    background-image: url(Image/California\ University.jpg);
+}
+.img-box6{
+    background-image: url(Image/Tokyo\ University.jpg);
+}
+.img-box7{
+    background-image: url(Image/Chicago\ University.jpg);
+}
+.img-box .text, .img-box1 .text, .img-box2 .text, .img-box3 .text, .img-box4 .text, .img-box5 .text, .img-box6 .text, .img-box7 .text{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    line-height: 17px;
+    background-color: #0a1f44;
+    opacity: 0;
+    transition: top 1s linear, opacity 1s linear;
+}
+.img-box:hover .text{
+    opacity: 1;
+}
+.img-box1:hover .text{
+    opacity: 1;
+}
+.img-box2:hover .text{
+    opacity: 1;
+}
+.img-box3:hover .text{
+    opacity: 1;
+}
+.img-box4:hover .text{
+    opacity: 1;
+}
+.img-box5:hover .text{
+    opacity: 1;
+}
+.img-box6:hover .text{
+    opacity: 1;
+}
+.img-box7:hover .text{
+    opacity: 1;
+}
+.trusted-img::before{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 20%;
+    content: '';
+    border-bottom: 3px solid rgb(155, 152, 0);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+.trusted-img:hover::before{
+    opacity: 0.5;
+}
+.trusted-img img{
+    width: 100px;
+    border-radius: 50%;
+}
+.text h4{
+    font-size: 140%;
+}
+.row{
+    width: 100%;
+}
+.second{
+    margin-left: 0px;
+}
+.text a{
+    text-decoration: none;
+    color: white;
+}
+.About-Universities{
+    padding: 120px 0;
+    background-color: white;
+}
+.About-Universities .section-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.About-Universities .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.section-title{
+    text-align: center;
+    padding: 0;
+    font-size: 30px;
+    font-family: monospace;
+}
+.About-Universities .about-details .section-title{
+    padding: 0px;
+}
+.About-Universities .about details .about-text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+}
+.About-Universities .about details{
+    max-width: 50%;
+}
+.About-Universities .about-details .section-title{
+    padding: 0;
+}
+
+.Oxford-Universities{
+    background-color: #ffffff;
+}
+.Cambridge-Universities{
+    background-color: #030e20;
+}
+.Yangon-Universities{
+    background-color: #ffffff;
+}
+.Eth-Universities{
+    background-color: #030e20;
+}
+.Harvard-Universities{
+    background-color: #ffffff;
+}
+.California-Universities{
+    background-color: #030e20;
+}
+.Tokyo-Universities{
+    background-color: #ffffff;
+}
+.Chicago-Universities{
+    background-color: #030e20;
+}
+.Oxford-video{
+    padding-top: 70px;
+    float: left;
+    width: 1000px;
+}
+.yangon-video{
+    padding-top: 70px;
+    float: left;
+    width: 1000px;
+}
+.harvard-video{
+    padding-top: 70px;
+    float: left;
+    width: 1000px;
+}
+.tokyo-video{
+    padding-top: 70px;
+    float: left;
+    width: 1000px;
+}
+.about-oxford{
+    padding-right: 90px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about-cambridge{
+    padding-right: 90px;
+    text-align: center;
+}
+.about-yangon{
+    padding-right: 90px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about-eth{
+    padding-right: 90px;
+    text-align: center;
+}
+.about-harvard{
+    padding-right: 90px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about-california{
+    padding-right: 90px;
+    text-align: center;
+}
+.about-tokyo{
+    padding-right: 90px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about-chicago{
+    padding-right: 90px;
+    text-align: center;
+}
+.oxford-text{
+    color: #0a1f44;
+}
+.cambridge-text{
+    color: #ffffff;
+    margin-left: 150px;
+}
+.yangon-text{
+    color: #0a1f44;
+}
+.eth-text{
+    color: #ffffff;
+    margin-left: 150px;
+}
+.harvard-text{
+    color: #0a1f44;
+}
+.california-text{
+    color: #ffffff;
+    margin-left: 150px;
+}
+.tokyo-text{
+    color: #0a1f44;
+}
+.chicago-text{
+    color: #ffffff;
+    margin-left: 150px;
+}
+.oxford-title{
+    padding-top: 35px;
+    color: #0a1f44;
+    text-align: center;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.cambridge-title{
+    color: #ffffff;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.yangon-title{
+    padding-top: 35px;
+    color: #0a1f44;
+    text-align: center;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.eth-title{
+    color: #ffffff;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.harvard-title{
+    padding-top: 35px;
+    color: #0a1f44;
+    text-align: center;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.california-title{
+    color: #ffffff;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.tokyo-title{
+    padding-top: 35px;
+    color: #0a1f44;
+    text-align: center;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.chicago-title{
+    color: #ffffff;
+    text-align: center;
+    margin-left: 150px;
+    font-size: 200%;
+    animation: shake 2s linear infinite alternate;
+}
+.img{
+    padding-top: 25px;
+    margin-right: 200px;
+    float: right;
+}
+
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #0a1f44;
+    color: white;
+    font-size: 0.9rem;
+}
+button{
+    text-decoration: none;
+    background-color: #0a1f44;
+}
+button a{
+    color: white;
+    text-decoration: none;
+    margin-top: 50px;
+}
+button a:hover{
+    background-color: #030e20;
+}
+#Back{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+
+
+
+[class*="col-"]{width: 100%;}
+*{box-sizing: border-box;}
+
+@media only screen and (min-width: 576px){
+.col-s-1{width: 8.33%;}
+.col-s-2{width: 16.66%;}
+.col-s-3{width: 25%;}
+.col-s-4{width: 33.33%;}
+.col-s-5{width: 41.66%;}
+.col-s-6{width: 50%;}
+.col-s-7{width: 58.33%;}
+.col-s-8{width: 66.66%;}
+.col-s-9{width: 75%;}
+.col-s-10{width: 83.33%;}
+.col-s-11{width: 91.66%;}
+.col-s-12{width: 100%;}
+}
+
+@media only screen and (min-width: 768px){
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+}
+@media only screen and (min-width: 768px){
+    .second{margin-left: 16.66%;}
+}

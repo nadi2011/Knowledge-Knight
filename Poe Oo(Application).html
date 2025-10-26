@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Universities Application</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Image/KK.jpg" type="Image/KK">
+    <link rel="stylesheet" href="Navbar.css">
+    <style>
+        /* Custom Colors based on user's RGB values */
+        :root {
+            --bg-light-blue: rgb(180, 201, 245); /* Main body background */
+            --nav-dark-teal: rgb(57, 102, 129); /* Navbar background */
+            --header-dark-green: rgb(7, 46, 39); /* H1 color */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light-blue);
+            min-height: 100vh;
+        }
+        .bg-nav-teal { background-color: #0a1f44; }
+        .text-header-green { color: var(--header-dark-green); }
+        .hover-darken:hover { background-color: rgb(10, 9, 36); }
+        
+        /* Mobile menu specific styles (for visibility) */
+        .mobile-menu-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 64px; /* Below the nav bar */
+            left: 0;
+            right: 0;
+            background-color: var(--nav-dark-teal);
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+    
+    </style>
+</head>
+<body class="selection:bg-white selection:text-nav-teal">
+    <div class="relative">
+        <!-- Navigation Bar (Using user's Dark Teal color) -->
+        <nav class="bg-nav-teal text-white shadow-lg rounded-b-xl px-4 sm:px-8 sticky top-0 z-20 navbar">
+            <div class="max-w-6xl mx-auto flex justify-between items-center h-16 navdiv">
+                <!-- Logo/Branding Section -->
+                <div class="flex items-center space-x-3">
+                    <div class="logo">Knowledge<span>Knight</span></div>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About Universities.html">Universities</a></li>
+                    <li><a href="Nadi (Application 2).html">Scolarships</a></li>
+                    <li><a href="Poe Oo(Application).html" class="active">Applications</a></li>
+                    <li><a href="Hsu Mon (About Us).html">About Us</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="menu-toggle" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition duration-150" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto p-4 sm:p-8">
+        
+        <!-- Header using user's Dark Green/Teal color -->
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-center mt-12 mb-12 text-header-green">
+            Universities Application
+        </h1>
+        
+        <!-- Introduction Card -->
+        <section class="bg-white p-6 sm:p-10 rounded-xl shadow-xl border border-gray-200 mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-nav-teal mb-4 border-b pb-2">Your Path to Higher Education</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Welcome to this example application guide. Applying to university is a multi-step journey, and understanding each phase is crucial. This portal breaks down the process, from gathering your academic history to submitting your final required documents. Focus on quality and completeness in every section to maximize your chances of admission.
+            </p>
+        </section>
+
+        <!-- Application Steps Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Step 1 Card -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-nav-teal text-white rounded-full font-bold text-lg mr-3">1</div>
+                    <h3 class="text-xl font-semibold text-header-green">Personal Information</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Start by providing your basic legal name, contact details, and demographic information. Ensure all fields are accurate and match your official documents.</p>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-nav-teal text-white rounded-full font-bold text-lg mr-3">2</div>
+                    <h3 class="text-xl font-semibold text-header-green">Academic Records</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Upload transcripts, standardized test scores (if applicable), and list all educational institutions you have attended previously.</p>
+            </div>
+            
+            <!-- Step 3 Card -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-nav-teal text-white rounded-full font-bold text-lg mr-3">3</div>
+                    <h3 class="text-xl font-semibold text-header-green">Essays & Motivation</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Write your personal statement and respond to any required prompts. This is your chance to showcase your unique personality and aspirations.</p>
+            </div>
+
+            <!-- Step 4 Card (NEW) -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-nav-teal text-white rounded-full font-bold text-lg mr-3">4</div>
+                    <h3 class="text-xl font-semibold text-header-green">Supporting Documents</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Request letters of recommendation, prepare your CV/resume, and upload any necessary portfolio items specific to your chosen program.</p>
+            </div>
+
+            <!-- Step 5 Card (NEW) -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 flex items-center justify-center bg-nav-teal text-white rounded-full font-bold text-lg mr-3">5</div>
+                    <h3 class="text-xl font-semibold text-header-green">Review & Submit</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Carefully review all sections, sign the applicant declaration, and pay the non-refundable application fee to finalize your submission.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action Section (NEW) -->
+        <section class="mt-12 p-8 text-center bg-white rounded-xl shadow-2xl border-4 border-nav-teal transform hover:scale-[1.005] transition duration-300">
+            <h2 class="text-3xl font-extrabold text-nav-teal mb-4">Ready to Start Your Application?</h2>
+            <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                Click the button below to navigate to the first step of the application process and begin filling out your personal information.
+            </p>
+            <button class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-nav-teal hover-darken transition duration-300 transform hover:shadow-xl hover:scale-105">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Begin Application Now
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Simple JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+</body>
+</html>
+ss
